@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background: rgb(211, 74, 74);
+            color: white;  
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Java Script</p>
+    <div id = "msg" class="msg1">Clique em mim</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]//[0] quer dizer que vai pegar o primeiro paragrafo
+        document.write(p1.innerText)
+        p1.style.color = 'black'
+        
+        /*
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = "Estou Aguardando..." */
+
+        var d = document.getElementsByClassName('msg1')[0]
+        d.style.background = 'green'
+
+        var j = document.querySelector('div#msg')
+        j.innerText = "Teste"
+
+        //window.document.write(window.document.charset)
+    </script>
+    
+
+</body>
+</html>
